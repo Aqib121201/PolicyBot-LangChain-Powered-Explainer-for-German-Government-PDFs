@@ -2,22 +2,24 @@
 
 ## Abstract
 
-PolicyBot is an intelligent document analysis system designed to process German government PDFs from govdata.de, providing automated summarization, question-answering capabilities, and semantic analysis. The system leverages state-of-the-art transformer models through LangChain framework, incorporating keyword extraction and topic classification to enable efficient navigation and understanding of complex policy documents. The implementation demonstrates significant improvements in document accessibility and information retrieval for German governmental content.
+PolicyBot is an intelligent document analysis system designed to process German government PDFs from govdata.de, providing automated summarization, question answering capabilities, and semantic analysis. The system leverages state of the art transformer models through LangChain framework, incorporating keyword extraction and topic classification to enable efficient navigation and understanding of complex policy documents. The implementation demonstrates significant improvements in document accessibility and information retrieval for German governmental content.
 
 ## Problem Statement
 
 German government documents published on govdata.de contain critical policy information, legal frameworks, and administrative procedures that are essential for citizens, researchers, and policymakers. However, these documents often suffer from:
 
-- **Complex language and technical terminology** that creates barriers for non-expert readers
-- **Lengthy document structures** that make information retrieval time-consuming
+- **Complex language and technical terminology** that creates barriers for non expert readers
+- **Lengthy document structures** that make information retrieval time consuming
 - **Lack of automated analysis tools** for extracting key insights and answering specific questions
-- **Limited accessibility** for non-German speakers or those with different expertise levels
+- **Limited accessibility** for non German speakers or those with different expertise levels
 
 This project addresses the challenge of making German government documents more accessible and actionable through intelligent document processing and natural language understanding.
 
 **References:**
 - [German Federal Government Open Data Strategy](https://www.bmi.bund.de/DE/themen/verfassung/staatliche-ordnung/oeffentliche-verwaltung/open-government/open-data/open-data-node.html)
-- [LangChain: Data-Aware Language Models for Document Analysis](https://arxiv.org/abs/2302.16185)
+- [DocXChain: A Powerful Open-Source Toolchain for Document Parsing and Beyond](https://arxiv.org/abs/2310.12430)  
+- [mPLUG-DocOwl: Modularized Multimodal LLM for OCR-Free Document Understanding](https://arxiv.org/abs/2307.02499)
+
 
 ## Dataset Description
 
@@ -40,7 +42,7 @@ The system processes German government PDFs sourced from [govdata.de](https://ww
 
 ### Core Architecture
 
-The system employs a multi-stage processing pipeline:
+The system employs a multi stage processing pipeline:
 
 1. **Document Ingestion**: PDF parsing and text extraction
 2. **Text Processing**: Chunking and embedding generation
@@ -87,17 +89,6 @@ Where $q$ is the query embedding and $d$ is the document chunk embedding.
 | **Topic Classification** | 92.1% | Multi-class accuracy |
 | **Response Time** | 2.3s | Average query processing time |
 
-### Key Visualizations
-
-![SHAP Summary Plot](./visualizations/shap_summary_policybot.png)
-*Feature importance analysis for document classification*
-
-![Confusion Matrix](./visualizations/confusion_matrix_topics.png)
-*Topic classification performance across government document categories*
-
-![Keyword Cloud](./visualizations/keyword_cloud.png)
-*Extracted keywords from German policy documents*
-
 ## Explainability / Interpretability
 
 The system provides multiple layers of interpretability:
@@ -136,7 +127,7 @@ The best performing configuration achieved:
 ## Project Structure
 
 ```
-📦 PolicyBot-LangChain-Powered-Explainer-for-German-Government-PDFs/
+PolicyBot-LangChain-Powered-Explainer-for-German-Government-PDFs/
 │
 ├── 📁 data/                   # Raw & processed datasets
 │   ├── raw/                  # Original PDFs from govdata.de
@@ -205,7 +196,7 @@ The best performing configuration achieved:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/PolicyBot-LangChain-Powered-Explainer-for-German-Government-PDFs.git
+git clone https://github.com/Aqib121201/PolicyBot-LangChain-Powered-Explainer-for-German-Government-PDFs.git
 cd PolicyBot-LangChain-Powered-Explainer-for-German-Government-PDFs
 
 # Create virtual environment
@@ -290,14 +281,15 @@ pytest tests/test_qa_system.py -v
 
 This project was developed as part of research into intelligent document processing for government applications. Special thanks to:
 
-- **Technical Advisors**: Prof. Dr. [Name], Technical University of Munich
-- **Domain Experts**: German Federal Ministry of the Interior
-- **Open Source Community**: HuggingFace, LangChain, and Streamlit teams
+Technical Guidance:
+- **Nadeem Akhtar**, Engineering Manager II at SumUp, former Zalando, alumnus of the University of Bonn  
+  Provided strategic feedback on system architecture and industry applicability
+
+Open Source Community:
+- HuggingFace, LangChain, and Streamlit development teams for their excellent tooling and documentation
 
 **Contributors:**
-- [Your Name] - Lead Developer & Research
-- [Team Member] - Data Processing & Analysis
-- [Team Member] - UI/UX Design & Testing
+- Aqib Siddiqui - Lead Developer & Research
 
 ---
 
