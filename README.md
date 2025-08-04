@@ -273,9 +273,6 @@ pytest tests/test_qa_system.py -v
 - **Accuracy**: May struggle with highly technical or domain-specific terminology
 - **Real-time Processing**: Large documents (>50 pages) require preprocessing time
 
-## PDF Report
-
-[📄 Download Full Technical Report](./report/PolicyBot_Technical_Report.pdf)
 
 ## Contribution & Acknowledgements
 
